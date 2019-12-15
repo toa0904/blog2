@@ -1,2 +1,15 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container">
+  <div class="col-md-12 box">
+    <%= image_tag 'dog.jpeg', class: 'img' %>
+    <h1 class="text"><%= @article.title %></h1>
+    <div class="text-box">
+      <p class="title"><%= simple_format @article.body %></p>
+      <p class="text-right">
+        <%= @article.created_at.strftime("%Y年%m月%d日") %>
+      </p>
+    </div>
+    <%= link_to '編集', edit_article_path(@article), class: 'btn btn-primary', style: 'margin-bottom: 10px' %>
+    <%= link_to '削除する', article_path(@article), method: :delete, data: {confirm: '削除してもよろしいですか？'}, class: 'btn btn-danger', style: 'margin-bottom: 10px; margin-left: 10px' %>
+  </div>
+</div>
+
