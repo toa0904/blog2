@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(235, 232, 226);
+}
+
+.box{
+  margin-top: 5%;
+  background-color: white;
+  border: 1px solid black;
+  .title {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+  .img-responsive {
+    padding-top: 15px;
+  }
+}
+
+.text-box {
+  padding-bottom: 15px;
+}
+
+a {
+  color: rgb(109, 104, 97);
+}
+
+.btn {
+  margin-top: 15px;
+}
