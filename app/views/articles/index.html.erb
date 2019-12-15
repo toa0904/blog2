@@ -1,9 +1,20 @@
 <div class="container">
-<h1 class="text-center">Blog</h1>
-<% @article.each do |article| %>
-  <div class="col-md-3">
-    <p><%= article.title %></p>
-    <%= article.created_at.strftime("%Y年%m月%d日") %>
+  <div class="row">
+    <% @article.each do |article| %>
+      <%= link_to article do %>
+        <div class="col-md-3 box">
+          <%= image_tag 'dog.jpeg', class: 'img-responsive' %>
+          <div class="text-box">
+            <p class="title"><%= article.title %></p>
+            <span class="created">
+              <%= article.created_at.strftime("%Y年%m月%d日") %>
+            </span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-<% end %>
+  <div class="row">
+    <%= link_to '新規作成', new_article_path, class: 'btn btn-primary' %>
+  </div>
 </div>
